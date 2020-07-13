@@ -22,10 +22,10 @@ if ($conn->connect_error) {
 
 echo "<form method = \"POST\" action=\"\">";
 echo "<input type=\"radio\" name=\"button\" value=\"button1\" id=\"button1\"> To print whole table <br>";
-echo "<input type=\"radio\" name=\"button\" value=\"button2\" id=\"button2\" > Print all Books where ìTwilightî is part of title of book <br>";
+echo "<input type=\"radio\" name=\"button\" value=\"button2\" id=\"button2\" > Print all Books where ‚ÄúTwilight‚Äù is part of title of book <br>";
 echo "<input type=\"radio\" name=\"button\" value=\"button3\" id=\"button3\" > Print all the books with ISBNumber 100 <br>";
 echo "<input type=\"radio\" name=\"button\" value=\"button4\" id=\"button4\"> Print all the books belonging from department novel <br>";
-echo "<input type=\"radio\" name=\"button\" value=\"button5\" id=\"button5\" > Print all books whose title contain ìtheî <br>";
+echo "<input type=\"radio\" name=\"button\" value=\"button5\" id=\"button5\" > Print all books whose title contain ‚Äúthe‚Äù <br>";
 echo "<input type=\"submit\" value=\"Submit\">";
 echo "</form>";
 
@@ -67,7 +67,7 @@ if(isset($_POST['button'])) {
 
  
 
-// Print all Books where ìTwilightî is part of title of book
+// Print all Books where ‚ÄúTwilight‚Äù is part of title of book
 
 if($selected == "button2"){
 
@@ -161,11 +161,11 @@ if($selected == "button4"){
 
  
 
-// Print all books whose title contain ìtheî
+// Print all books whose title contain ‚Äúthe‚Äù
 
 if($selected == "button5"){
 
-  echo "Print all books whose title contain ìtheî";
+  echo "Print all books whose title contain ‚Äúthe‚Äù";
 
   $sql = "SELECT Title,ISBNumber,Department FROM Books WHERE Title LIKE '%the%'";
    $result = $conn->query($sql);
