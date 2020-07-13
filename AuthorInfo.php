@@ -22,11 +22,11 @@ if ($conn->connect_error) {
 
 echo "<form method = \"POST\" action=\"\">";
 echo "<input type=\"radio\" name=\"button\" value=\"button1\" id=\"button1\"> Print all of the authors <br>";
-echo "<input type=\"radio\" name=\"button\" value=\"button2\" id=\"button2\" > Print all authors where “Nancy” is part of the name of the author <br>";
-echo "<input type=\"radio\" name=\"button\" value=\"button3\" id=\"button3\" > Print all authors with a specific designation is “Professor” or “Employee” <br>";
-echo "<input type=\"radio\" name=\"button\" value=\"button4\" id=\"button4\"> Print all authors with Qualification is “PhD” and “Designation is “Professor” <br>";
-echo "<input type=\"radio\" name=\"button\" value=\"button5\" id=\"button5\" > Print all authors with Qualification is “masters” and “Designation is “Professor” <br>";
-echo "<input type=\"radio\" name=\"button\" value=\"button6\" id=\"button6\" > Print all authors whose email contain “.edu” <br>";
+echo "<input type=\"radio\" name=\"button\" value=\"button2\" id=\"button2\" > Print all authors where â€œNancyâ€ is part of the name of the author <br>";
+echo "<input type=\"radio\" name=\"button\" value=\"button3\" id=\"button3\" > Print all authors with a specific designation is â€œProfessorâ€ or â€œEmployeeâ€ <br>";
+echo "<input type=\"radio\" name=\"button\" value=\"button4\" id=\"button4\"> Print all authors with Qualification is â€œPhDâ€ and â€œDesignation is â€œProfessorâ€ <br>";
+echo "<input type=\"radio\" name=\"button\" value=\"button5\" id=\"button5\" > Print all authors with Qualification is â€œmastersâ€ and â€œDesignation is â€œProfessorâ€ <br>";
+echo "<input type=\"radio\" name=\"button\" value=\"button6\" id=\"button6\" > Print all authors whose email contain â€œ.eduâ€ <br>";
 
 
 echo "<input type=\"submit\" value=\"Submit\">";
@@ -70,11 +70,11 @@ if(isset($_POST['button'])) {
 
  
 
-// Print all authors where “Nancy” is part of the name of the author
+// Print all authors where â€œNancyâ€ is part of the name of the author
 
 if($selected == "button2"){
 
-  echo "Print all authors where “Nancy” is part of the name of the author";
+  echo "Print all authors where â€œNancyâ€ is part of the name of the author";
 
   $sql = "SELECT * FROM `Author` where Name = 'jay'";
    $result = $conn->query($sql);
@@ -102,11 +102,11 @@ if($selected == "button2"){
 
  
 
-// Print all authors with a specific designation is “Professor” or “Employee”
+// Print all authors with a specific designation is â€œProfessorâ€ or â€œEmployeeâ€
 
 if($selected == "button3"){
 
-  echo "Print all authors with a specific designation is “Professor” or “Employee”";
+  echo "Print all authors with a specific designation is â€œProfessorâ€ or â€œEmployeeâ€";
 
   $sql = "SELECT * FROM `Author` where Designation = 'Professor'";
    $result = $conn->query($sql);
@@ -134,11 +134,11 @@ if($selected == "button3"){
 
  
 
-// Print all authors with Qualification is “PhD” and “Designation is “Professor”
+// Print all authors with Qualification is â€œPhDâ€ and â€œDesignation is â€œProfessorâ€
 
 if($selected == "button4"){
 
-  echo "Print all authors with Qualification is “PhD” and “Designation is “Professor” <br>";
+  echo "Print all authors with Qualification is â€œPhDâ€ and â€œDesignation is â€œProfessorâ€ <br>";
 
   $sql = "SELECT * FROM `Author` where Qualification = 'PH. D' AND Designation = 'Professor'";
 
@@ -166,11 +166,11 @@ if($selected == "button4"){
 
  
 
-// Print all authors with Qualification is “masters” and “Designation is “Professor”
+// Print all authors with Qualification is â€œmastersâ€ and â€œDesignation is â€œProfessorâ€
 
 if($selected == "button5"){
 
-  echo "Print all authors with Qualification is “masters” and “Designation is “Professor”";
+  echo "Print all authors with Qualification is â€œmastersâ€ and â€œDesignation is â€œProfessorâ€";
 
   $sql = "SELECT * FROM `Author` where Qualification = 'masters' AND Designation = 'Professor'";
 
@@ -197,11 +197,11 @@ if($selected == "button5"){
 
  
 
-// Print all authors whose email contain “.edu”
+// Print all authors whose email contain â€œ.eduâ€
 
 if($selected == "button6"){
 
-  echo "Print all authors whose email contain “.edu”";
+  echo "Print all authors whose email contain â€œ.eduâ€";
 
   $sql = "SELECT * FROM Author WHERE Email LIKE '%.edu%'";
    $result = $conn->query($sql);
